@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexFlow AI Solutions | Enterprise AI & Automation Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    },
+                    colors: {
+                        brand: { 50: '#f0fdfa', 500: '#00d4ff', 600: '#00a8cc', 900: '#0f172a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text { background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 flex justify-between items-center z-50">
+        <div class="flex items-center gap-2">
+            <span class="text-yellow-400 font-bold">★ 4.9/5</span>
+            <span class="opacity-80">120+ Verified Reviews on Google</span>
+        </div>
+        <div class="hidden md:block">Cyber City, Gurugram | Available 24/7</div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-slate-200 z-40">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-display font-bold text-slate-900 tracking-tight">ApexFlow<span class="text-sky-500">AI</span></div>
+            <nav class="hidden md:flex gap-8 font-medium text-sm">
+                <a href="#services" class="hover:text-sky-500 transition">Services</a>
+                <a href="#why" class="hover:text-sky-500 transition">Why Us</a>
+                <a href="#contact" class="hover:text-sky-500 transition">Get Started</a>
+            </nav>
+            <a href="#booking" class="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-sky-600 transition">Book Consultation</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-20 px-6 container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+            <div class="inline-flex items-center gap-2 bg-sky-50 text-sky-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span></span>
+                Enterprise-Grade AI Automation Agency
+            </div>
+            <h1 class="text-5xl md:text-6xl font-display font-extrabold leading-tight mb-6">Scale Smarter with <span class="gradient-text">Automated AI Workflows</span></h1>
+            <p class="text-lg text-slate-600 mb-8 max-w-lg">Transform your business operations with custom chatbots, automated lead gen, and intelligent enterprise software. Built for scale in Cyber City, Gurugram.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#booking" class="bg-sky-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-sky-600 transition shadow-lg shadow-sky-200">Book Free Strategy Call</a>
+                <a href="https://wa.me/919876543210?text=Hello ApexFlow AI Solutions, I want to inquire about your services." class="border border-slate-300 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition">Chat on WhatsApp</a>
+            </div>
+        </div>
+        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="p-6 bg-slate-50 rounded-2xl">
+                    <h3 class="text-3xl font-bold text-sky-500">80%</h3>
+                    <p class="text-sm text-slate-500">Manual Task Reduction</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl">
+                    <h3 class="text-3xl font-bold text-sky-500">24/7</h3>
+                    <p class="text-sm text-slate-500">Automated Support</p>
+                </div>
+            </div>
+            <div class="mt-8 border-t pt-6">
+                <p class="text-slate-600 italic">"ApexFlow transformed our lead pipeline in weeks. Absolute game changers."</p>
+                <div class="mt-4 font-semibold text-sm">— Director, Tech Startup Gurugram</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-display font-bold mb-16 text-center">Core AI Solutions</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                {[ {title: "Support Chatbots", desc: "Custom GPT-4 agents that handle 90% of customer queries instantly."}, {title: "Lead Outreach", desc: "AI-driven email sequences that qualify and book meetings on autopilot."}, {title: "Workflow Auto", desc: "Sync your enterprise apps (CRM/ERP) to eliminate data silos."} ].map(service => (
+                    <div class="p-8 rounded-2xl border border-slate-800 hover:border-sky-500 transition bg-slate-800/50">
+                        <h3 class="text-xl font-bold mb-4">{service.title}</h3>
+                        <p class="text-slate-400 mb-6">{service.desc}</p>
+                        <a href="#booking" class="text-sky-400 font-semibold text-sm hover:underline">Learn more →</a>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="py-20 px-6 container mx-auto max-w-2xl">
+        <div class="bg-white p-10 rounded-3xl shadow-2xl shadow-slate-200">
+            <h2 class="text-3xl font-display font-bold mb-2">Request Consultation</h2>
+            <p class="text-slate-500 mb-8">Tell us about your project requirements.</p>
+            <div id="form-feedback" class="hidden mb-6 p-4 bg-green-50 text-green-700 rounded-lg font-medium text-center">Thank you! Our experts will reach out within 24 hours.</div>
+            <form id="contactForm" class="space-y-4">
+                <input type="text" placeholder="Your Name" required class="w-full p-4 border rounded-xl focus:ring-2 focus:ring-sky-500 outline-none">
+                <input type="email" placeholder="Business Email" required class="w-full p-4 border rounded-xl focus:ring-2 focus:ring-sky-500 outline-none">
+                <select class="w-full p-4 border rounded-xl outline-none">
+                    <option>Consultation & Strategy</option>
+                    <option>Turnaround & Implementation</option>
+                    <option>24/7 VIP Support</option>
+                </select>
+                <textarea placeholder="Tell us your goals..." required class="w-full p-4 border rounded-xl h-32 focus:ring-2 focus:ring-sky-500 outline-none"></textarea>
+                <button type="submit" class="w-full bg-slate-900 text-white p-4 rounded-xl font-bold hover:bg-sky-600 transition">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="border rounded-xl">
+                    <button class="w-full p-6 text-left font-semibold flex justify-between items-center" onclick="toggleFaq(this)">How long does implementation take? <span>+</span></button>
+                    <div class="px-6 pb-6 text-slate-600 hidden">Most solutions are deployed within 14-21 business days.</div>
+                </div>
+                <div class="border rounded-xl">
+                    <button class="w-full p-6 text-left font-semibold flex justify-between items-center" onclick="toggleFaq(this)">Are your bots secure? <span>+</span></button>
+                    <div class="px-6 pb-6 text-slate-600 hidden">We prioritize enterprise security and data privacy. All data is handled according to industry standards.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm">
+        <p>&copy; 2024 ApexFlow AI Solutions. Cyber City, DLF Phase 2, Gurugram, Haryana.</p>
+        <p class="mt-2 text-sky-500 font-bold">+91 98765 43210 | contact@apexflowaisolutions.com</p>
+    </footer>
+
+    <script>
+        // Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('form-feedback').classList.remove('hidden');
+        });
+
+        // FAQ Handling
+        function toggleFaq(el) {
+            const content = el.nextElementSibling;
+            content.classList.toggle('hidden');
+            el.querySelector('span').innerText = content.classList.contains('hidden') ? '+' : '−';
+        }
+    </script>
+</body>
+</html>
